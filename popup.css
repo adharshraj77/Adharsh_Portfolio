@@ -26,3 +26,14 @@
     cursor: pointer;
     margin-top: 10px;
   }
+
+  html {
+    scroll-behavior: smooth;
+   }
+   
+  
+   
+   #down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 

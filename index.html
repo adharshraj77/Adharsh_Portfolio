@@ -235,9 +235,8 @@
   
 
             <!-- popup -->
-           <div style="overflow:scroll; overflow: hidden;">
-            <div id="popup" style="overflow:scroll" class=" popup-overlay fixed inset-0 overflow-auto bg-gray-100 flex justify-center items-center min-h-screen bg-gradient-to-l from-[#1595b6] to-[#1f2667e6]">
-              <div    class="sm:mt-50  container mx-auto p-6 bg-black shadow-lg rounded-lg max-w-4xl w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 overflow-auto">
+            <div id="popup" style="overflow: scroll; " class="popup-overlay fixed inset-0 overflow-auto bg-gray-100 flex justify-center items-center min-h-screen bg-gradient-to-l from-[#1595b6] to-[#1f2667e6]">
+              <div class="container mx-auto p-6 bg-black shadow-lg rounded-lg max-w-4xl w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 overflow-y-auto max-h-[90vh]">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8 popup-content bg-black p-4">
                   <div class="flex-1 text-center md:text-left">
                     <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">About Me</h1>
@@ -276,7 +275,7 @@
                 </div>
               </div>
             </div>
-          </div>
+            
             
 
           </div>
@@ -325,9 +324,11 @@
       >
       <!-- Latest works -->
         <button
+        
+        onclick="latestWorksfun()"
           class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20"
         >
-          Latest Works
+           Latest Works
 
           <svg
             xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -377,6 +378,7 @@
     <!-- Second Section -->
     <section class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16">
       <h2
+      id="latestWorks"
         class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]"
       >
         Latest Works
@@ -575,7 +577,7 @@
           >
             <img
               class="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
-              src="./assets/images/pioneer-digital.webp"
+              src="./assets/images/tealeaves.png"
               alt=""
             />
             <span
@@ -1050,6 +1052,11 @@
   
       function hidePopup() {
         document.getElementById('popup').style.display = 'none';
+      }
+      function latestWorksfun(){
+        var elmntToView = document.getElementById("latestWorks");
+        elmntToView.scrollIntoView(); 
+
       }
     </script>
   
